@@ -70,3 +70,5 @@ D:\MicroServiceSample\FullfillmentService.Host\bin\zh-Hant\System.Spatial.resour
 D:\MicroServiceSample\FullfillmentService.Host\obj\Debug\FullfillmentService.Host.csprojResolveAssemblyReference.cache
 D:\MicroServiceSample\FullfillmentService.Host\obj\Debug\FullfillmentService.Host.dll
 D:\MicroServiceSample\FullfillmentService.Host\obj\Debug\FullfillmentService.Host.pdb
+D:\MicroServiceSample\FullfillmentService.Host\bin\MicroServiceLogs.dll
+D:\MicroServiceSample\FullfillmentService.Host\bin\MicroServiceLogs.pdb

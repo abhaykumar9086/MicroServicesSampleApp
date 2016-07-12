@@ -1,0 +1,5 @@
+D:\MicroServiceSample\MicroServiceesLogs\bin\Debug\MicroServiceesLogs.dll.config
+D:\MicroServiceSample\MicroServiceesLogs\bin\Debug\MicroServiceesLogs.dll
+D:\MicroServiceSample\MicroServiceesLogs\bin\Debug\MicroServiceesLogs.pdb
+D:\MicroServiceSample\MicroServiceesLogs\obj\Debug\MicroServiceesLogs.dll
+D:\MicroServiceSample\MicroServiceesLogs\obj\Debug\MicroServiceesLogs.pdb

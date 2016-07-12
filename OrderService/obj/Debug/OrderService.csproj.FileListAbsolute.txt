@@ -1,0 +1,37 @@
+c:\users\singh_ay\documents\visual studio 2013\Projects\OrderService\OrderService\bin\Debug\OrderService.dll
+c:\users\singh_ay\documents\visual studio 2013\Projects\OrderService\OrderService\bin\Debug\OrderService.pdb
+c:\users\singh_ay\documents\visual studio 2013\Projects\OrderService\OrderService\bin\Debug\Newtonsoft.Json.dll
+c:\users\singh_ay\documents\visual studio 2013\Projects\OrderService\OrderService\bin\Debug\Newtonsoft.Json.xml
+c:\users\singh_ay\documents\visual studio 2013\Projects\OrderService\OrderService\obj\Debug\OrderService.dll
+c:\users\singh_ay\documents\visual studio 2013\Projects\OrderService\OrderService\obj\Debug\OrderService.pdb
+C:\Users\singh_ay\Documents\visual studio 2013\Projects\OrderService\OrderService\bin\Debug\System.Web.Http.dll
+C:\Users\singh_ay\Documents\visual studio 2013\Projects\OrderService\OrderService\bin\Debug\System.Web.Http.xml
+C:\Users\singh_ay\Documents\visual studio 2013\Projects\OrderService\OrderService\obj\Debug\OrderService.csprojResolveAssemblyReference.cache
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\bin\Debug\OrderService.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\bin\Debug\OrderService.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\bin\Debug\SharedMicroServiceLib.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\bin\Debug\System.Web.Http.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\bin\Debug\System.Web.Http.xml
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\obj\Debug\OrderService.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\obj\Debug\OrderService.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\OrderService\obj\Debug\OrderService.csprojResolveAssemblyReference.cache
+D:\MicroServiceSample\OrderService\bin\Debug\OrderService.dll.config
+D:\MicroServiceSample\OrderService\bin\Debug\OrderService.dll
+D:\MicroServiceSample\OrderService\bin\Debug\OrderService.pdb
+D:\MicroServiceSample\OrderService\bin\Debug\SharedMicroServiceLib.dll
+D:\MicroServiceSample\OrderService\bin\Debug\System.Net.Http.Formatting.dll
+D:\MicroServiceSample\OrderService\bin\Debug\System.Web.Http.dll
+D:\MicroServiceSample\OrderService\bin\Debug\System.Web.Http.WebHost.dll
+D:\MicroServiceSample\OrderService\bin\Debug\EntityFramework.dll
+D:\MicroServiceSample\OrderService\bin\Debug\Newtonsoft.Json.dll
+D:\MicroServiceSample\OrderService\bin\Debug\SharedMicroServiceLib.pdb
+D:\MicroServiceSample\OrderService\bin\Debug\System.Net.Http.Formatting.xml
+D:\MicroServiceSample\OrderService\bin\Debug\System.Web.Http.xml
+D:\MicroServiceSample\OrderService\bin\Debug\System.Web.Http.WebHost.xml
+D:\MicroServiceSample\OrderService\bin\Debug\EntityFramework.xml
+D:\MicroServiceSample\OrderService\bin\Debug\Newtonsoft.Json.xml
+D:\MicroServiceSample\OrderService\obj\Debug\OrderService.csprojResolveAssemblyReference.cache
+D:\MicroServiceSample\OrderService\obj\Debug\OrderService.dll
+D:\MicroServiceSample\OrderService\obj\Debug\OrderService.pdb

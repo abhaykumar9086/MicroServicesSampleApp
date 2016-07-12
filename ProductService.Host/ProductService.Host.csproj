@@ -171,6 +171,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MicroServiceesLogs\MicroServiceLogs.csproj">
+      <Project>{3edc6b6b-158c-4965-a0c4-20fbe00e15de}</Project>
+      <Name>MicroServiceLogs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProductService\ProductService.csproj">
       <Project>{8fea553a-cb78-4e17-852a-8089b6b4f4ff}</Project>
       <Name>ProductService</Name>

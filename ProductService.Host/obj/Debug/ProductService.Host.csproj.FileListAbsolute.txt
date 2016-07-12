@@ -74,3 +74,5 @@ D:\MicroServiceSample\ProductService.Host\obj\Debug\ProductService.Host.dll
 D:\MicroServiceSample\ProductService.Host\obj\Debug\ProductService.Host.pdb
 D:\MicroServiceSample\ProductService.Host\bin\WebHostBasicAuth.Modules.dll
 D:\MicroServiceSample\ProductService.Host\bin\WebHostBasicAuth.Modules.pdb
+D:\MicroServiceSample\ProductService.Host\bin\MicroServiceLogs.dll
+D:\MicroServiceSample\ProductService.Host\bin\MicroServiceLogs.pdb

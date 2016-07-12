@@ -76,3 +76,5 @@ D:\MicroServiceSample\CustomerService.Host\bin\zh-Hant\System.Spatial.resources.
 D:\MicroServiceSample\CustomerService.Host\obj\Debug\CustomerService.Host.csprojResolveAssemblyReference.cache
 D:\MicroServiceSample\CustomerService.Host\obj\Debug\CustomerService.Host.dll
 D:\MicroServiceSample\CustomerService.Host\obj\Debug\CustomerService.Host.pdb
+D:\MicroServiceSample\CustomerService.Host\bin\MicroServiceLogs.dll
+D:\MicroServiceSample\CustomerService.Host\bin\MicroServiceLogs.pdb

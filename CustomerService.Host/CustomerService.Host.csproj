@@ -184,6 +184,10 @@
       <Project>{243a637b-3cbc-4844-8cb1-8639e3e0b0c5}</Project>
       <Name>CustomerService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MicroServiceesLogs\MicroServiceLogs.csproj">
+      <Project>{3edc6b6b-158c-4965-a0c4-20fbe00e15de}</Project>
+      <Name>MicroServiceLogs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebHostBasicAuth.Modules\WebHostBasicAuth.Modules.csproj">
       <Project>{5dc4cccf-47c0-4a6f-b52f-5bddd00e0310}</Project>
       <Name>WebHostBasicAuth.Modules</Name>

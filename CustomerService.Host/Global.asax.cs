@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MicroServiceLogs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,7 @@ namespace CustomerService.Host
         protected void Application_Start()
         {
             WebApiConfig.Register(GlobalConfiguration.Configuration);
+            GlobalConfiguration.Configuration.MessageHandlers.Add(new MessageLoggingHandler());
         }
     }
 }

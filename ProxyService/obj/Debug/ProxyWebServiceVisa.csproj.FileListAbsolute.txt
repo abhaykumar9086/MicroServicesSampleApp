@@ -1,0 +1,6 @@
+D:\simplegateway\WpfApplication1\bin\Debug\ProxyWebServiceVisa.dll.config
+D:\simplegateway\WpfApplication1\bin\Debug\ProxyWebServiceVisa.dll
+D:\simplegateway\WpfApplication1\bin\Debug\ProxyWebServiceVisa.pdb
+D:\simplegateway\ProxyWebService1\obj\Debug\ProxyWebServiceVisa.csprojResolveAssemblyReference.cache
+D:\simplegateway\ProxyWebService1\obj\Debug\ProxyWebServiceVisa.dll
+D:\simplegateway\ProxyWebService1\obj\Debug\ProxyWebServiceVisa.pdb

@@ -1,0 +1,10 @@
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\ProxyService\obj\Debug\ProxyService.csprojResolveAssemblyReference.cache
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\ProxyService\obj\Debug\ProxyOrderService.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\ProxyService\obj\Debug\ProxyOrderService.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WpfApplication1\bin\Debug\ProxyOrderService.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WpfApplication1\bin\Debug\ProxyOrderService.pdb
+D:\MicroServiceSample\WpfApplication1\bin\Debug\ProxyOrderService.dll
+D:\MicroServiceSample\WpfApplication1\bin\Debug\ProxyOrderService.pdb
+D:\MicroServiceSample\ProxyService\obj\Debug\ProxyService.csprojResolveAssemblyReference.cache
+D:\MicroServiceSample\ProxyService\obj\Debug\ProxyOrderService.dll
+D:\MicroServiceSample\ProxyService\obj\Debug\ProxyOrderService.pdb

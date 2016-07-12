@@ -1,0 +1,23 @@
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\bin\Debug\SharedMicroServiceLib.dll.config
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\bin\Debug\SharedMicroServiceLib.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\bin\Debug\SharedMicroServiceLib.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\bin\Debug\EntityFramework.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\bin\Debug\EntityFramework.xml
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\obj\Debug\SharedMicroServiceLib.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\obj\Debug\SharedMicroServiceLib.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\obj\Debug\SharedMicroServiceLib.Migrations.Initial.resources
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\obj\Debug\SharedMicroServiceLib.csproj.GenerateResource.Cache
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\SharedMicroServiceLib\obj\Debug\SharedMicroServiceLib.csprojResolveAssemblyReference.cache
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\SharedMicroServiceLib.dll.config
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\SharedMicroServiceLib.dll
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\SharedMicroServiceLib.pdb
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\EntityFramework.dll
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\EntityFramework.SqlServer.dll
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\Newtonsoft.Json.dll
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\EntityFramework.xml
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\EntityFramework.SqlServer.xml
+D:\MicroServiceSample\SharedMicroServiceLib\bin\Debug\Newtonsoft.Json.xml
+D:\MicroServiceSample\SharedMicroServiceLib\obj\Debug\SharedMicroServiceLib.dll
+D:\MicroServiceSample\SharedMicroServiceLib\obj\Debug\SharedMicroServiceLib.pdb

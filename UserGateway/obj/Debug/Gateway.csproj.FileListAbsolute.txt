@@ -1,0 +1,14 @@
+D:\simplegateway\UserGateway\bin\Debug\Gateway.dll
+D:\simplegateway\UserGateway\bin\Debug\Gateway.pdb
+D:\simplegateway\UserGateway\obj\Debug\Gateway.csprojResolveAssemblyReference.cache
+D:\simplegateway\UserGateway\obj\Debug\Gateway.dll
+D:\simplegateway\UserGateway\obj\Debug\Gateway.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\UserGateway\bin\Debug\Gateway.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\UserGateway\bin\Debug\Gateway.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\UserGateway\obj\Debug\Gateway.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\UserGateway\obj\Debug\Gateway.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\UserGateway\obj\Debug\Gateway.csprojResolveAssemblyReference.cache
+D:\MicroServiceSample\UserGateway\bin\Debug\Gateway.dll
+D:\MicroServiceSample\UserGateway\bin\Debug\Gateway.pdb
+D:\MicroServiceSample\UserGateway\obj\Debug\Gateway.dll
+D:\MicroServiceSample\UserGateway\obj\Debug\Gateway.pdb

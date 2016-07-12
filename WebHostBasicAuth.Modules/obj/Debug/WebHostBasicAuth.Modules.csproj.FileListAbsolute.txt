@@ -1,0 +1,14 @@
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\bin\Debug\WebHostBasicAuth.Modules.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\bin\Debug\WebHostBasicAuth.Modules.pdb
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\bin\Debug\System.Web.Http.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\bin\Debug\Newtonsoft.Json.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\bin\Debug\System.Web.Http.xml
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\obj\Debug\WebHostBasicAuth.Modules.csprojResolveAssemblyReference.cache
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\obj\Debug\WebHostBasicAuth.Modules.dll
+C:\Users\singh_ay\Documents\Visual Studio 2013\Projects\SampleMircroService\WebHostBasicAuth.Modules\obj\Debug\WebHostBasicAuth.Modules.pdb
+D:\MicroServiceSample\WebHostBasicAuth.Modules\bin\Debug\WebHostBasicAuth.Modules.dll
+D:\MicroServiceSample\WebHostBasicAuth.Modules\bin\Debug\WebHostBasicAuth.Modules.pdb
+D:\MicroServiceSample\WebHostBasicAuth.Modules\obj\Debug\WebHostBasicAuth.Modules.dll
+D:\MicroServiceSample\WebHostBasicAuth.Modules\obj\Debug\WebHostBasicAuth.Modules.pdb

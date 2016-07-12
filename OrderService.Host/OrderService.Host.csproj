@@ -182,6 +182,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MicroServiceesLogs\MicroServiceLogs.csproj">
+      <Project>{3edc6b6b-158c-4965-a0c4-20fbe00e15de}</Project>
+      <Name>MicroServiceLogs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OrderService\OrderService.csproj">
       <Project>{355a3f04-8d66-4b84-b05f-b415508e4ae6}</Project>
       <Name>OrderService</Name>

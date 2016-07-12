@@ -73,3 +73,5 @@ D:\MicroServiceSample\PaymentService.Host\bin\zh-Hant\System.Spatial.resources.d
 D:\MicroServiceSample\PaymentService.Host\obj\Debug\PaymentService.Host.csprojResolveAssemblyReference.cache
 D:\MicroServiceSample\PaymentService.Host\obj\Debug\PaymentService.Host.dll
 D:\MicroServiceSample\PaymentService.Host\obj\Debug\PaymentService.Host.pdb
+D:\MicroServiceSample\PaymentService.Host\bin\MicroServiceLogs.dll
+D:\MicroServiceSample\PaymentService.Host\bin\MicroServiceLogs.pdb

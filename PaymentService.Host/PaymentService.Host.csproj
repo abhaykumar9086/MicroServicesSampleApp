@@ -182,6 +182,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MicroServiceesLogs\MicroServiceLogs.csproj">
+      <Project>{3edc6b6b-158c-4965-a0c4-20fbe00e15de}</Project>
+      <Name>MicroServiceLogs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PaymentService\PaymentService.csproj">
       <Project>{e7e2937b-3de6-4b28-a73f-a671acdb3918}</Project>
       <Name>PaymentService</Name>

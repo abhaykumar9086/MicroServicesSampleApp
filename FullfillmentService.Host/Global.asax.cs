@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MicroServiceLogs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,7 @@ namespace FullfillmentService.Host
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            GlobalConfiguration.Configuration.MessageHandlers.Add(new MessageLoggingHandler());
         }
     }
 }

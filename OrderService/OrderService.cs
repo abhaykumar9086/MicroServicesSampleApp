@@ -1,114 +1,120 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
-using SharedMicroServiceLib;
-using System.Net;
 using System.Web.Http.Description;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Configuration;
+using OrderService.Repository;
+using SharedMicroServiceLib;
+
 
 namespace OrderService
 {
-    [Authorize]
     public class OrderController : ApiController
     {
+        private OrderRepository _orderRep = new OrderRepository();
 
-        private BONorthWind bo = new BONorthWind();
-        private PagedList<Order> _pagedOrders = null;
-        private int _pageSize = 8;
-
-
-        private readonly string accessToken = "accessToken";
-        private readonly string OrderServiceHostUrl = "OrderService.Host";
-
-        public OrderController()
+        // GET: api/Order
+        public IQueryable<Order> GetOrders()
         {
-            accessToken = ConfigurationManager.AppSettings["accessToken"];
-            OrderServiceHostUrl = ConfigurationManager.AppSettings["OrderService.Host"];
+            return _orderRep.GetAll();
         }
 
-        private void InitOrders(string id)
-        {
-            var orders = bo.GetOrders(id);
-            _pagedOrders = new PagedList<Order>(orders, _pageSize);
-
-        }
-        //
-        // GET: /Order/
-        [ResponseType(typeof(List<Order>))]
-        [Route("api/Order/GetOrders/{id}")]
-        public HttpResponseMessage GetOrders(string id, int page = 1)
-        {
-            HttpResponseMessage response = new HttpResponseMessage();
-            if (string.IsNullOrEmpty(id))
-            {
-                response = Request.CreateResponse(HttpStatusCode.NotFound);
-            }
-            else if (_pagedOrders == null)
-            {
-                InitOrders(id);
-                _pagedOrders.CurrentPage = page;
-                var lstResult = _pagedOrders.GetListFromPage(_pagedOrders.CurrentPage);
-                response = Request.CreateResponse(HttpStatusCode.OK, lstResult);
-            }
-            return response;
-        }
-
-
-        [Route("api/Order/GetOrderbyCustomerID/{id}")]
-        [ResponseType(typeof(List<Order>))]
-        public HttpResponseMessage GetOrderbyCustomerID(string id)
-        {
-            HttpResponseMessage response = new HttpResponseMessage();
-            if (string.IsNullOrEmpty(id))
-            {
-                response = Request.CreateResponse(HttpStatusCode.NotFound);
-            }
-            else
-            {
-                var lstResult = bo.GetOrderByCustomerId(id);
-                response = Request.CreateResponse(HttpStatusCode.OK, lstResult);
-            }
-
-            return response;
-        }
-
-        [HttpPost]
+        // GET: api/Order/5
         [ResponseType(typeof(Order))]
-        public HttpResponseMessage CreateOrder(OrderDetailsDTO orderDetailsDTO, string CustomerID = null, Nullable<int> EmployeeID = null, Nullable<int> ShipVia = null)
+        public IHttpActionResult GetOrder(int id)
         {
-            HttpResponseMessage response = new HttpResponseMessage();
+            Order order = _orderRep.GetSingle(id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(order);
+        }
+
+        // PUT: api/Order/5
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutOrder(int id, Order order)
+        {
             if (!ModelState.IsValid)
             {
-                response = Request.CreateResponse(HttpStatusCode.NotFound);
+                return BadRequest(ModelState);
             }
+
+            if (id != order.OrderID)
+            {
+                return BadRequest();
+            }
+
+            _orderRep.Edit(order);
+
             try
             {
-                var orderid = bo.AddOrder(orderDetailsDTO);
-                response = Request.CreateResponse(HttpStatusCode.Created, orderid);
+                _orderRep.Save();
             }
-            catch (Exception ex)
+            catch (DbUpdateConcurrencyException)
             {
-                Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+                if (!OrderExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
-            return response;
+
+            return StatusCode(HttpStatusCode.NoContent);
         }
 
-        [HttpGet]
-        [Route("api/Order/GetOrderDetails/{Id}")]
-        [ResponseType(typeof(List<Order_Detail>))]
-        public HttpResponseMessage GetOrderDetails(string id)
+        // POST: api/Order
+        [ResponseType(typeof(Order))]
+        public IHttpActionResult PostOrder(OrderDetailsDTO orderDetailsDTO)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, bo.GetOrderDetails(id));
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var orderid = _orderRep.AddOrder(orderDetailsDTO);
+            _orderRep.Save();
+
+            return CreatedAtRoute("DefaultApi", new { id = orderid }, orderDetailsDTO);
         }
 
+        // DELETE: api/Order/5
+        [ResponseType(typeof(Order))]
+        public IHttpActionResult DeleteOrder(int id)
+        {
+            Order order = _orderRep.GetSingle(id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            _orderRep.Delete(order);
+            _orderRep.Save();
+
+            return Ok(order);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _orderRep.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private bool OrderExists(int id)
+        {
+            return _orderRep.OrderExists(id);
+        }
     }
-
-
 }
-
-

@@ -1,46 +1,119 @@
-﻿using SharedMicroServiceLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
+using ProductService.Repository;
+using SharedMicroServiceLib;
 
 namespace ProductService
 {
-    [Authorize]
     public class ProductController : ApiController
     {
-        private BONorthWind bo = null;
+        private ProductRepository _productRep = new ProductRepository();
 
-        public ProductController()
+        // GET: api/Product
+        public IQueryable<Product> GetProducts()
         {
-            bo = new BONorthWind();
+            return _productRep.GetAll();
         }
 
-        [Route("api/Product")]
-        public HttpResponseMessage GetAllProducts()
+        // GET: api/Product/5
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult GetProduct(int id)
         {
-            HttpResponseMessage response = new HttpResponseMessage();
-            return Request.CreateResponse(HttpStatusCode.OK, bo.GetAllProducts());
-        }
-        [Route("api/Product/GetProductByProductID/productID")]
-        public HttpResponseMessage GetProductByProductID(string productID)
-        {
-            HttpResponseMessage response = new HttpResponseMessage();
-            if (string.IsNullOrEmpty(productID))
+            Product product = _productRep.GetSingle(id);
+            if (product == null)
             {
-                response = Request.CreateResponse(HttpStatusCode.NotFound);
-            }
-            else
-            {
-                var lstResult = bo.GetProductByProductID(Convert.ToInt32(productID));
-                response = Request.CreateResponse(HttpStatusCode.OK, lstResult);
+                return NotFound();
             }
 
-            return response;
+            return Ok(product);
+        }
+
+        // PUT: api/Product/5
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutProduct(int id, Product product)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != product.ProductID)
+            {
+                return BadRequest();
+            }
+
+            _productRep.Edit(product);
+
+            try
+            {
+                _productRep.Save();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProductExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        // POST: api/Product
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult PostProduct(Product product)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            _productRep.Add(product);
+            _productRep.Save();
+
+            return CreatedAtRoute("DefaultApi", new { id = product.ProductID }, product);
+        }
+
+        // DELETE: api/Product/5
+        [ResponseType(typeof(Product))]
+        public IHttpActionResult DeleteProduct(int id)
+        {
+            Product product = _productRep.GetSingle(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            _productRep.Delete(product);
+            _productRep.Save();
+
+            return Ok(product);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _productRep.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private bool ProductExists(int id)
+        {
+            return _productRep.ProductExists(id);
         }
     }
 }

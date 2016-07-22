@@ -1,96 +1,136 @@
-﻿using SharedMicroServiceLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using CustomerService.Repository;
+using SharedMicroServiceLib;
 
 namespace CustomerService
 {
-    [Authorize]
-    public class CustomerController : ApiController
+    public class CustomersController : ApiController
     {
-        private BONorthWind bo = new BONorthWind();
-        private PagedList<Customer> _pagedCustomers = null;
-        private int _pageSize = 8;
+        private CustomerRepository _customerRep = new CustomerRepository();
 
-        private void InitCustomers()
+        // GET: api/Customers
+        public IQueryable<Customer> GetCustomers()
         {
+            return _customerRep.GetAll();
+        }
 
-            if (_pagedCustomers == null)
+        // GET: api/Customers/5
+        [ResponseType(typeof(Customer))]
+        public IHttpActionResult GetCustomer(string id)
+        {
+            Customer customer = _customerRep.GetSingle(id);
+            if (customer == null)
             {
-                var customers = bo.GetCustomers();
-                _pagedCustomers = new PagedList<Customer>(customers, _pageSize);
+                return NotFound();
             }
 
+            return Ok(customer);
         }
-        //
-        // GET: /Customer/
-        [HttpGet]
-        [ResponseType(typeof(List<Customer>))]
-        public HttpResponseMessage GetCustomer(int page = 1)
+
+        // PUT: api/Customers/5
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutCustomer(string id, Customer customer)
         {
-            HttpResponseMessage httpResponse = new HttpResponseMessage();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != customer.CustomerID)
+            {
+                return BadRequest();
+            }
+
+            _customerRep.Edit(customer);
+
             try
             {
-                InitCustomers();
-                _pagedCustomers.CurrentPage = page;
-                httpResponse = Request.CreateResponse(HttpStatusCode.OK, _pagedCustomers.GetListFromPage(_pagedCustomers.CurrentPage));
+                _customerRep.Save();
             }
-            catch
+            catch (DbUpdateConcurrencyException)
             {
-                httpResponse = Request.CreateResponse(HttpStatusCode.NotFound);
+                if (!CustomerExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
 
-            return httpResponse;
+            return StatusCode(HttpStatusCode.NoContent);
         }
 
-        ////
-        //// POST: /Customer/Create
-        [HttpPost]
+        // POST: api/Customers
         [ResponseType(typeof(Customer))]
-        public HttpResponseMessage CreateCustomer(Customer customer)
+        public IHttpActionResult PostCustomer(Customer customer)
         {
-            HttpResponseMessage response = new HttpResponseMessage();
             if (!ModelState.IsValid)
             {
-                response = Request.CreateResponse(HttpStatusCode.NotFound);
+                return BadRequest(ModelState);
             }
-            else
-            {
-                response = Request.CreateResponse(HttpStatusCode.Created, bo.AddCustomer(customer));
-            }
-            return response;
 
+            _customerRep.Add(customer);
+
+
+            try
+            {
+                _customerRep.Save();
+            }
+            catch (DbUpdateException)
+            {
+                if (CustomerExists(customer.CustomerID))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return CreatedAtRoute("DefaultApi", new { id = customer.CustomerID }, customer);
         }
 
-        ////
-        //// PUT: /Customer/Create
-        [HttpPut]
-        [Route("api/Customer/{id:int}")]
-        [ResponseType(typeof(void))]
-        public HttpResponseMessage UpdateCustomer(string customerId, Customer customer)
+        // DELETE: api/Customers/5
+        [ResponseType(typeof(Customer))]
+        public IHttpActionResult DeleteCustomer(string id)
         {
-            HttpResponseMessage response = new HttpResponseMessage();
-            if (!ModelState.IsValid)
+            Customer customer = _customerRep.GetSingle(id); //db.Customers.Find(id);
+            if (customer == null)
             {
-                response = Request.CreateResponse(HttpStatusCode.NotFound);
+                return NotFound();
             }
 
-            if (customerId != customer.CustomerID)
-            {
-                response = Request.CreateResponse(HttpStatusCode.NotFound);
-            }
-            else
-            {
-                response = Request.CreateResponse(HttpStatusCode.OK, bo.PutCustomer(customerId, customer));
-            }
-            return response;
+            _customerRep.Delete(customer);
+            _customerRep.Save();
+
+            return Ok(customer);
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _customerRep.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private bool CustomerExists(string id)
+        {
+            return _customerRep.CustomerExists(id);
+        }
     }
 }
